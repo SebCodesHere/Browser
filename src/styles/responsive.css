@@ -1,0 +1,460 @@
+@media (max-width: 1120px) {
+  .page-shell {
+    padding: 36px 30px 22px;
+  }
+
+  .settings-layout {
+    grid-template-columns: 182px minmax(0, 1fr);
+    gap: 19px;
+  }
+
+  .quick-grid,
+  .top-site-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bookmark-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-hero {
+    padding: 24px;
+  }
+
+  .about-mark {
+    width: 90px;
+    height: 90px;
+    border-radius: 26px;
+  }
+
+  .library-panel {
+    width: 312px;
+  }
+
+  .shield-panel {
+    width: 306px;
+  }
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    padding: 30px 24px 20px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 23px;
+  }
+
+  .page-actions {
+    justify-content: flex-start;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(29px, 5vw, 38px);
+  }
+
+  .settings-layout {
+    display: block;
+  }
+
+  .settings-nav {
+    position: relative;
+    top: auto;
+    flex-direction: row;
+    gap: 3px;
+    margin-bottom: 13px;
+    padding: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .settings-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .settings-nav button {
+    flex: 0 0 auto;
+    height: 31px;
+    padding: 0 9px;
+  }
+
+  .settings-nav-note {
+    display: none;
+  }
+
+  .settings-save-status {
+    gap: 9px;
+  }
+
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .library-panel {
+    width: 292px;
+  }
+
+  .shield-panel {
+    width: 282px;
+  }
+
+  .newtab-frame {
+    padding: 43px 28px 22px;
+  }
+
+  .newtab-hero h1 {
+    font-size: clamp(34px, 6vw, 48px);
+  }
+
+  .library-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .library-toolbar .search-field {
+    width: 100%;
+  }
+
+  .library-toolbar .result-count {
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 840px) {
+  .brand-word {
+    display: none;
+  }
+
+  .brand {
+    padding: 0 4px;
+  }
+
+  .platform-darwin .title-row {
+    padding-left: 78px;
+  }
+
+  .browser-tab {
+    flex-basis: 148px;
+  }
+
+  .toolbar {
+    gap: 5px;
+  }
+
+  .nav-cluster {
+    gap: 0;
+  }
+
+  .nav-button {
+    width: 29px;
+  }
+
+  .address-shell {
+    gap: 6px;
+    padding: 0 9px;
+  }
+
+  .toolbar-actions .icon-button {
+    width: 31px;
+  }
+
+  .page-shell {
+    padding: 27px 20px 18px;
+  }
+
+  .page-section {
+    padding: 19px 18px;
+  }
+
+  .quick-grid,
+  .top-site-grid,
+  .bookmark-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quick-card {
+    min-height: 66px;
+  }
+
+  .library-panel {
+    width: 274px;
+  }
+
+  .shield-panel {
+    width: 266px;
+  }
+
+  .library-tabs button {
+    font-size: 9.7px;
+    gap: 4px;
+  }
+
+  .library-tabs button svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .newtab-frame {
+    padding: 37px 22px 20px;
+  }
+
+  .hero-search {
+    height: 64px;
+    padding-left: 16px;
+    border-radius: 21px;
+  }
+
+  .hero-search > input {
+    font-size: 14px;
+  }
+
+  .provider-select-wrap {
+    display: none;
+  }
+
+  .mode-banner {
+    flex-wrap: wrap;
+  }
+
+  .mode-banner .pill-button {
+    margin-left: 50px;
+  }
+
+  .about-mark {
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+  }
+
+  .about-mark svg {
+    width: 47px;
+    height: 47px;
+  }
+
+  .about-hero-copy h2 {
+    font-size: 20px;
+  }
+
+  .row-meta {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .title-row {
+    gap: 6px;
+    padding-right: 8px;
+  }
+
+  .title-actions {
+    gap: 3px;
+  }
+
+  .tor-chip {
+    padding: 0 8px;
+  }
+
+  .tor-chip > span:not(.tor-chip-dot) {
+    display: none;
+  }
+
+  .browser-tab {
+    flex-basis: 126px;
+    min-width: 96px;
+  }
+
+  .new-private-button {
+    display: none;
+  }
+
+  .toolbar {
+    padding: 0 8px 7px;
+  }
+
+  .site-badge {
+    width: 20px;
+    height: 20px;
+  }
+
+  .address-shell {
+    height: 37px;
+    border-radius: 16px;
+  }
+
+  .mode-badge {
+    display: none;
+  }
+
+  .address-input {
+    font-size: 11.8px;
+  }
+
+  .toolbar-actions .download-button {
+    display: none;
+  }
+
+  .page-actions {
+    width: 100%;
+  }
+
+  .page-actions .search-field {
+    width: 100%;
+  }
+
+  .page-footer {
+    gap: 6px;
+  }
+
+  .bookmark-card {
+    border-radius: 17px;
+  }
+
+  .download-card {
+    flex-wrap: wrap;
+  }
+
+  .download-main {
+    flex-basis: calc(100% - 52px);
+  }
+
+  .download-actions {
+    margin-left: 50px;
+  }
+
+  .download-actions .secondary-button {
+    min-height: 27px;
+    font-size: 10.5px;
+  }
+
+  .danger-zone {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .tor-status-card {
+    flex-wrap: wrap;
+  }
+
+  .tor-controls {
+    width: 100%;
+    padding-left: 55px;
+  }
+
+  .settings-save-status .idle-label,
+  .settings-save-status .saving-label,
+  .settings-save-status .saved-label {
+    display: none;
+  }
+
+  .library-panel {
+    width: 264px;
+  }
+
+  .shield-panel {
+    width: 256px;
+  }
+
+  .library-header {
+    padding-left: 14px;
+  }
+
+  .library-subhead .text-button {
+    font-size: 9.2px;
+  }
+
+  .library-subhead .text-button svg {
+    display: none;
+  }
+
+  .about-hero {
+    padding: 19px;
+  }
+
+  .about-signoff {
+    padding: 20px;
+  }
+
+  .error-card {
+    padding: 25px 20px;
+  }
+
+  .error-card h1 {
+    font-size: 23px;
+  }
+
+  .newtab-frame {
+    padding: 31px 18px 17px;
+  }
+
+  .newtab-hero h1 {
+    font-size: clamp(30px, 7.5vw, 40px);
+  }
+
+  .newtab-hero > p {
+    font-size: 12px;
+  }
+
+  .hero-search {
+    height: 59px;
+    margin-top: 23px;
+  }
+
+  .hero-search-go {
+    width: 37px;
+    height: 37px;
+    border-radius: 12px;
+  }
+
+  .quiet-note {
+    align-items: flex-start;
+    font-size: 9.8px;
+  }
+
+  .newtab-footer {
+    padding-top: 30px;
+  }
+
+  .section-line h2 {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 750px) {
+  .newtab-frame {
+    padding-top: 34px;
+  }
+
+  .newtab-hero h1 {
+    font-size: clamp(32px, 4vw, 46px);
+  }
+
+  .hero-search {
+    height: 62px;
+    margin-top: 24px;
+  }
+
+  .quick-section {
+    margin-top: 27px;
+  }
+
+  .quick-section + .quick-section {
+    margin-top: 23px;
+  }
+
+  .newtab-footer {
+    padding-top: 26px;
+  }
+
+  .page-shell {
+    padding-top: 30px;
+  }
+}

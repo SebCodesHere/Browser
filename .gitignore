@@ -1,0 +1,28 @@
+# Build output
+dist/
+dist-electron/
+release/
+target/
+core/target/
+node_modules/
+*.tsbuildinfo
+
+# Runtime / local data
+.xuvon-dev/
+test-results/
+playwright-report/
+screenshots/*.png
+
+# Generated icon set (run `npm run icons`)
+build/icon.png
+build/icons/
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Local env
+.env
+.env.local

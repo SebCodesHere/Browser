@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  # The platform Xuvon is developed and verified on. This job is blocking.
+  macos:
+    runs-on: macos-14
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - run: npm ci
+      - run: cargo fmt --check
+      - run: npm run test:core
+      - run: npm run typecheck
+      - run: npx playwright test --reporter=list
+      - run: npm run package:dir
+      - run: npx playwright test tests/packaged.spec.ts --reporter=list
+
+  # Experimental: these platforms are configured but not yet verified. Keep the
+  # job non-blocking until a real build and smoke test has been performed and
+  # docs/verification.md has been updated.
+  unverified-platforms:
+    needs: macos
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - run: npm ci
+      - run: npm run test:core
+      - run: npm run typecheck
+      - run: npm run build:core:release
