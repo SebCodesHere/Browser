@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - ".github/workflows/windows-installer.yml"
+      - "package.json"
+      - "package-lock.json"
 
 permissions:
   contents: read
