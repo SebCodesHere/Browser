@@ -70,6 +70,37 @@ ad-hoc signature from the linker, which Apple Silicon requires).
 - **Not yet built or tested.** The first Windows release must be smoke-tested
   (boot, tabs, downloads, proxy settings) before this claim changes.
 
+### Build on Windows
+
+Install Node 22 LTS, Rust stable with the MSVC toolchain, and Visual Studio 2022
+Build Tools with **Desktop development with C++**. Then:
+
+```powershell
+rustup default stable-x86_64-pc-windows-msvc
+npm ci
+npm run typecheck
+npm run test:core
+npm run package:win
+```
+
+The unsigned NSIS installer is written to `release/` as
+`Xuvon Browser-0.1.0-win-<arch>.exe`. Test it on Windows before distributing it.
+
+### Build with GitHub Actions
+
+The manual **Windows installer** workflow
+(`.github/workflows/windows-installer.yml`) runs on `windows-latest`, builds the
+Rust core and NSIS installer, and uploads `release/*.exe` as the
+`xuvon-windows-installer` artifact for 14 days.
+
+1. Open **Actions → Windows installer → Run workflow**.
+2. Wait for the job to pass.
+3. Download the artifact at the bottom of the run.
+4. Test the installer on a Windows x64 machine before sending it to anyone.
+
+Without a Windows code-signing certificate, the installer is unsigned and
+SmartScreen will warn on first launch.
+
 ## Linux
 
 - Targets are `AppImage` and `deb`, category `Network;WebBrowser`, maintainer
@@ -96,7 +127,7 @@ updates.
 ## Update strategy for Chromium/Electron
 
 - Electron releases land every ~8 weeks. Upgrade in a branch, run
-  `npm test` (core + 30 end-to-end tests), and rebuild all three platforms.
+  `npm test` (core + 42 end-to-end tests), and rebuild all three platforms.
 - Chromium-facing behaviour is concentrated in `electron/sessions.ts`,
   `electron/tabs.ts`, and `electron/downloads.ts`; read those files when an
   upgrade changes `WebContentsView`, sessions, or download events.
